@@ -1,54 +1,39 @@
-//Scroll kembali keatas
-let mybutton = document.getElementById("myBtn");
+// Scroll and UI interactions for Alvin Helm
+const toTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (toTop) toTop.classList.toggle('visible', window.scrollY > 300);
+});
+if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-window.onscroll = function () {
-  scrollFunction();
-};
-function scrollFunction() {
-  if (document.documentElement.scrollTop > 300) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-function topFunction() {
-  document.documentElement.scrollTop = 0;
-}
-
-//Ketik
-var typed = new Typed(".auto-typed", {
-  strings: ["Good", "Excellent", "Perfect"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  loop: true,
+let cartCount = 0;
+document.querySelectorAll('.add-cart').forEach((button) => {
+  button.addEventListener('click', () => {
+    cartCount += 1;
+    const count = document.getElementById('cartCount');
+    if (count) count.textContent = cartCount;
+    button.classList.add('added');
+    button.innerHTML = '<i class="bi bi-check2"></i> Ditambahkan';
+  });
 });
 
-//Scroll muncul satu persatu
-window.addEventListener("scroll", muncul);
-function muncul() {
-  let elements = document.querySelectorAll(".naik");
-  for (let i = 0; i < elements.length; i++) {
-    let tinggiLayar = window.innerHeight;
-    let jarakAtasElemen = elements[i].getBoundingClientRect().top;
-    let ukuranScroll = 5;
+document.querySelectorAll('.wish').forEach((button) => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+    const icon = button.querySelector('i');
+    icon.className = button.classList.contains('active') ? 'bi bi-heart-fill' : 'bi bi-heart';
+  });
+});
 
-    if (jarakAtasElemen < tinggiLayar - ukuranScroll) {
-      elements[i].classList.add("tampil");
-    } else {
-      elements[i].classList.remove("tampil");
-    }
-  }
+const searchInput = document.getElementById('searchInput');
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    document.querySelectorAll('.product-card').forEach((card) => {
+      card.style.display = card.dataset.name.includes(query) ? '' : 'none';
+    });
+  });
 }
 
-const spans = document.querySelectorAll("h1 span");
-spans.forEach((span) =>
-  span.addEventListener("mouseover", function (e) {
-    span.classList.add("animated", "rubberBand");
-  })
-);
-spans.forEach((span) =>
-  span.addEventListener("mouseout", function (e) {
-    span.classList.remove("animated", "rubberBand");
-  })
-);
+// Preserve existing scroll-to-top behavior compatibility
+const mybutton = document.getElementById('myBtn');
+if (mybutton) mybutton.style.display = 'none';
