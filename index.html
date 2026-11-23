@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blibli Store Ahmad Yani Serang — Marketplace Helm</title>
-  <meta name="description" content="Belanja helm berkualitas dengan harga terbaik">
-  <link rel="shortcut icon" href="img/faticon/output-onlinepngtools.png">
+  <title>Blibli Store Ahmad Yani Serang — Marketplace Handphone</title>
+  <meta name="description" content="Blibli Store Ahmad Yani Serang: belanja iPhone, Samsung, Huawei, Oppo, dan Vivo dengan harga terbaik">
+  <link rel="icon" type="image/svg+xml" href="img/faticon/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,15 +18,15 @@
         <span class="brand-mark"><i class="bi bi-shield-fill-check"></i></span>
         <span>Blibli Store Ahmad Yani Serang</span>
       </a>
-      <form class="search" role="search">
+      <form class="search" role="search" onsubmit="return false">
         <i class="bi bi-search"></i>
-        <input id="searchInput" type="search" placeholder="Cari helm, merek, atau tipe..." autocomplete="off">
+        <input id="searchInput" type="search" placeholder="Cari iPhone, Samsung, Oppo, atau tipe..." autocomplete="off">
       </form>
       <nav class="header-actions" aria-label="Navigasi utama">
         <a href="product.html"><i class="bi bi-grid"></i><span>Produk</span></a>
-        <a href="#"><i class="bi bi-heart"></i><span>Wishlist</span></a>
-        <a class="cart-link" href="#"><i class="bi bi-bag"></i><span>Keranjang</span><b id="cartCount">0</b></a>
-        <a class="profile" href="contact.html"><i class="bi bi-person-circle"></i></a>
+        <a href="product.html"><i class="bi bi-heart"></i><span>Wishlist</span></a>
+        <a class="cart-link" href="product.html"><i class="bi bi-bag"></i><span>Keranjang</span><b id="cartCount">0</b></a>
+        <a class="profile" href="contact.html" aria-label="Kontak"><i class="bi bi-person-circle"></i></a>
       </nav>
     </div>
   </header>
@@ -36,9 +35,11 @@
     <div class="container category-inner">
       <a class="category-active" href="index.html"><i class="bi bi-list"></i> Semua kategori</a>
       <a href="product.html">Promo Hari Ini</a>
-      <a href="product.html">Fullface</a>
-      <a href="product.html">Half Face</a>
-      <a href="product.html">Modular</a>
+      <a href="product.html?brand=iPhone">iPhone</a>
+      <a href="product.html?brand=Samsung">Samsung</a>
+      <a href="product.html?brand=Huawei">Huawei</a>
+      <a href="product.html?brand=Oppo">Oppo</a>
+      <a href="product.html?brand=Vivo">Vivo</a>
       <a href="about.html">Tentang Kami</a>
     </div>
   </nav>
@@ -47,9 +48,9 @@
     <section class="hero-market">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">AKSESORIS KENDARAAN • TERLARIS</span>
-          <h1>Melaju Aman,<br><em>Gaya Tetap Maksimal.</em></h1>
-          <p>Pilihan helm original dari merek terpercaya. Jaminan kualitas, pengiriman cepat, dan harga terbaik.</p>
+          <span class="eyebrow">HANDPHONE • TERLARIS</span>
+          <h1>Upgrade Sekarang,<br><em>Teknologi Terbaru di Tanganmu.</em></h1>
+          <p>iPhone, Samsung, Huawei, Oppo, dan Vivo 100% original. Garansi resmi, pengiriman cepat, dan harga terbaik dari Blibli Store Ahmad Yani Serang.</p>
           <div class="hero-buttons">
             <a class="btn-primary" href="product.html">Belanja Sekarang <i class="bi bi-arrow-right"></i></a>
             <a class="btn-secondary" href="about.html"><i class="bi bi-play-circle"></i> Tentang kami</a>
@@ -57,13 +58,14 @@
           <div class="trust-row">
             <span><i class="bi bi-patch-check-fill"></i> 100% Original</span>
             <span><i class="bi bi-truck"></i> Pengiriman Cepat</span>
-            <span><i class="bi bi-shield-check"></i> Garansi Aman</span>
+            <span><i class="bi bi-shield-check"></i> Garansi Resmi</span>
           </div>
         </div>
         <div class="hero-visual">
-          <div class="promo-badge"><small>Mulai dari</small><strong>Rp179K</strong></div>
+          <div class="promo-badge"><small>Mulai dari</small><strong>Rp6 Jt</strong></div>
           <div class="hero-orbit"></div>
-          <img src="img/produk/ink.png" alt="Helm INK koleksi terbaru">
+          <div class="phone samsung second" role="img" aria-label="Ilustrasi Galaxy S25 Ultra"><span class="cam"></span><div class="screen">Galaxy</div></div>
+          <div class="phone iphone " role="img" aria-label="Ilustrasi iPhone 17 Pro Max"><span class="cam"></span><div class="screen">iPhone</div></div>
         </div>
       </div>
     </section>
@@ -73,63 +75,102 @@
         <article><i class="bi bi-lightning-charge-fill"></i><div><strong>Flash Sale</strong><span>Diskon hingga 40%</span></div></article>
         <article><i class="bi bi-box-seam"></i><div><strong>Gratis Ongkir</strong><span>Untuk belanja tertentu</span></div></article>
         <article><i class="bi bi-arrow-repeat"></i><div><strong>Mudah Retur</strong><span>Pengembalian 7 hari</span></div></article>
-        <article><i class="bi bi-credit-card"></i><div><strong>Pembayaran Aman</strong><span>Berbagai metode tersedia</span></div></article>
+        <article><i class="bi bi-credit-card"></i><div><strong>Pembayaran Aman</strong><span>Cicilan 0% tersedia</span></div></article>
       </div>
     </section>
 
     <section class="catalog-section">
       <div class="container">
         <div class="section-heading">
-          <div><span class="section-kicker">KOLEKSI PILIHAN</span><h2>Produk Terlaris</h2></div>
+          <div><span class="section-kicker">KOLEKSI PILIHAN</span><h2>Handphone Terlaris</h2></div>
           <a href="product.html">Lihat semua <i class="bi bi-arrow-right"></i></a>
         </div>
-
         <div class="product-grid" id="productGrid">
-          <article class="product-card" data-name="ink trooper thunder fullface black">
+          <article class="product-card featured" data-brand="iPhone" data-name="iphone 17 pro max iphone apple">
             <div class="product-media">
-              <span class="sale-label">-30%</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
-              <img src="img/produk/ink.png" alt="INK Trooper Thunder">
+              <span class="badge-best"><i class="bi bi-star-fill"></i> Pilihan Utama</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone iphone " role="img" aria-label="Ilustrasi iPhone 17 Pro Max"><span class="cam"></span><div class="screen">iPhone</div></div>
             </div>
-            <div class="product-info"><span class="brand-label">INK</span><h3>Trooper Thunder Fullface</h3><div class="price"><strong>Rp695.000</strong><del>Rp995.000</del></div><button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button></div>
+            <div class="product-info">
+              <span class="brand-label">APPLE</span><h3>iPhone 17 Pro Max</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Chip A19 Pro</li><li><i class="bi bi-phone"></i> Layar OLED 6,9&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera 48MP triple</li><li><i class="bi bi-memory"></i> Memori 256GB</li><li><i class="bi bi-battery-charging"></i> Baterai tahan seharian</li><li><i class="bi bi-apple"></i> iOS terbaru, garansi resmi</li></ul>
+              <div class="price"><strong>Rp25.999.000</strong><del>Rp27.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah ke Keranjang</button>
+              <a class="detail-link" href="productDetail.html#IPHONE17PM">Lihat detail spesifikasi</a>
+            </div>
           </article>
-          <article class="product-card" data-name="kyt nz race bastianini fullface racing">
+          <article class="product-card" data-brand="Samsung" data-name="galaxy s25 ultra samsung samsung">
+            <div class="product-media">
+              <span class="sale-label ">-12%</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone samsung " role="img" aria-label="Ilustrasi Galaxy S25 Ultra"><span class="cam"></span><div class="screen">Galaxy</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">SAMSUNG</span><h3>Galaxy S25 Ultra</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Snapdragon 8 Elite</li><li><i class="bi bi-phone"></i> AMOLED 6,9&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 200MP</li><li><i class="bi bi-memory"></i> RAM 12GB / 256GB</li><li><i class="bi bi-battery-charging"></i> 5.000 mAh, 45W</li></ul>
+              <div class="price"><strong>Rp19.999.000</strong><del>Rp22.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#S25ULTRA">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Huawei" data-name="pura 70 pro huawei huawei">
             <div class="product-media">
               <span class="sale-label blue">Baru</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
-              <img src="img/produk/kyt balap.png" alt="KYT NZ Race Bastianini">
+              <div class="phone huawei " role="img" aria-label="Ilustrasi Pura 70 Pro"><span class="cam"></span><div class="screen">HUAWEI</div></div>
             </div>
-            <div class="product-info"><span class="brand-label">KYT</span><h3>NZ Race Bastianini Replica</h3><div class="price"><strong>Rp4.032.000</strong><del>Rp4.200.000</del></div><button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button></div>
+            <div class="product-info">
+              <span class="brand-label">HUAWEI</span><h3>Pura 70 Pro</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Kirin 9010</li><li><i class="bi bi-phone"></i> LTPO OLED 6,8&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 50MP</li><li><i class="bi bi-memory"></i> RAM 12GB / 512GB</li><li><i class="bi bi-battery-charging"></i> 5.050 mAh, 100W</li></ul>
+              <div class="price"><strong>Rp16.999.000</strong><del>Rp18.499.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#PURA70PRO">Lihat detail spesifikasi</a>
+            </div>
           </article>
-          <article class="product-card" data-name="ink adventure solid black">
+          <article class="product-card" data-brand="Oppo" data-name="find x8 oppo oppo">
             <div class="product-media">
               <span class="sale-label green">Favorit</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
-              <img src="img/produk/ink2.png" alt="INK Adventure Solid Black">
+              <div class="phone oppo " role="img" aria-label="Ilustrasi Find X8"><span class="cam"></span><div class="screen">OPPO</div></div>
             </div>
-            <div class="product-info"><span class="brand-label">INK</span><h3>Adventure Solid Black</h3><div class="price"><strong>Rp900.000</strong><del>Rp1.130.000</del></div><button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button></div>
+            <div class="product-info">
+              <span class="brand-label">OPPO</span><h3>Find X8</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Dimensity 9400</li><li><i class="bi bi-phone"></i> AMOLED 6,59&quot; 120Hz</li><li><i class="bi bi-camera"></i> Hasselblad 50MP</li><li><i class="bi bi-memory"></i> RAM 16GB / 512GB</li><li><i class="bi bi-battery-charging"></i> 5.630 mAh, 80W</li></ul>
+              <div class="price"><strong>Rp14.999.000</strong><del>Rp16.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#FINDX8">Lihat detail spesifikasi</a>
+            </div>
           </article>
-          <article class="product-card" data-name="airoh st701 way yellow glossy">
+          <article class="product-card" data-brand="Vivo" data-name="x200 vivo vivo">
             <div class="product-media">
-              <span class="sale-label">-10%</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
-              <img src="img/produk/airoh.png" alt="Airoh ST701 Way Yellow">
+              <span class="sale-label ">-10%</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone vivo " role="img" aria-label="Ilustrasi X200"><span class="cam"></span><div class="screen">vivo</div></div>
             </div>
-            <div class="product-info"><span class="brand-label">AIROH</span><h3>ST701 Way Yellow Gloss</h3><div class="price"><strong>Rp4.950.000</strong><del>Rp5.500.000</del></div><button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button></div>
+            <div class="product-info">
+              <span class="brand-label">VIVO</span><h3>X200</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Dimensity 9400</li><li><i class="bi bi-phone"></i> AMOLED 6,67&quot; 120Hz</li><li><i class="bi bi-camera"></i> ZEISS 50MP triple</li><li><i class="bi bi-memory"></i> RAM 12GB / 256GB</li><li><i class="bi bi-battery-charging"></i> 5.800 mAh, 90W</li></ul>
+              <div class="price"><strong>Rp13.999.000</strong><del>Rp15.499.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#X200">Lihat detail spesifikasi</a>
+            </div>
           </article>
         </div>
+        <p class="empty-note" id="emptyNote">Tidak ada produk yang cocok. Coba kata kunci lain.</p>
       </div>
     </section>
 
     <section class="brand-banner">
       <div class="container brand-banner-inner">
-        <div><span>KOLEKSI PREMIUM</span><h2>Siap Mengaspal?<br>Pilih Helm Pilihanmu.</h2><a href="product.html">Jelajahi Koleksi</a></div>
-        <img src="img/produk/zeus%20helm.png" alt="Helm Zeus koleksi premium">
+        <div><span>KOLEKSI PREMIUM</span><h2>Siap Ganti HP Baru?<br>Pilih Favoritmu.</h2><a href="product.html">Jelajahi Koleksi</a></div>
+        <div class="mini-phones" aria-hidden="true">
+          <div class="phone oppo " role="img" aria-label="Ilustrasi Find X8"><span class="cam"></span><div class="screen">OPPO</div></div><div class="phone iphone " role="img" aria-label="Ilustrasi iPhone 17"><span class="cam"></span><div class="screen">iPhone</div></div><div class="phone vivo " role="img" aria-label="Ilustrasi X200"><span class="cam"></span><div class="screen">vivo</div></div>
+        </div>
       </div>
     </section>
 
     <section class="benefits">
       <div class="container benefit-grid">
         <article><i class="bi bi-shield-fill-check"></i><div><h3>Produk Resmi</h3><p>Asli dan bergaransi</p></div></article>
-        <article><i class="bi bi-stars"></i><div><h3>Pilihan Lengkap</h3><p>Lebih dari 20 model</p></div></article>
-        <article><i class="bi bi-wallet2"></i><div><h3>Pembayaran Mudah</h3><p>Tunai & pembayaran digital</p></div></article>
-        <article><i class="bi bi-headset"></i><div><h3>Bantuan 24/7</h3><p>Tim siap membantu</p></div></article>
+        <article><i class="bi bi-stars"></i><div><h3>Pilihan Lengkap</h3><p>5 merek handphone ternama</p></div></article>
+        <article><i class="bi bi-wallet2"></i><div><h3>Pembayaran Mudah</h3><p>Tunai, transfer & cicilan</p></div></article>
+        <article><i class="bi bi-headset"></i><div><h3>Bantuan Pelanggan</h3><p>Tim siap membantu</p></div></article>
       </div>
     </section>
   </main>

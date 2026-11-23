@@ -1,457 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>Blibli Store Ahmad Yani Serang</title>
-  <link href="img/faticon/output-onlinepngtools.png" rel="shortcut icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
-  <!-- EFEK SCROLL -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produk — Blibli Store Ahmad Yani Serang</title>
+  <meta name="description" content="Daftar handphone iPhone, Samsung, Huawei, Oppo, dan Vivo lengkap dengan harga dan spesifikasi">
+  <link rel="icon" type="image/svg+xml" href="img/faticon/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" style="background-color: #101820">
-    <div class="container">
-      <a class="navbar-brand" href="#">Blibli Store Ahmad Yani Serang</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Blibli Store Ahmad Yani Serang beranda">
+        <span class="brand-mark"><i class="bi bi-shield-fill-check"></i></span>
+        <span>Blibli Store Ahmad Yani Serang</span>
+      </a>
+      <form class="search" role="search" onsubmit="return false">
+        <i class="bi bi-search"></i>
+        <input id="searchInput" type="search" placeholder="Cari iPhone, Samsung, Oppo, atau tipe..." autocomplete="off">
+      </form>
+      <nav class="header-actions" aria-label="Navigasi utama">
+        <a href="product.html"><i class="bi bi-grid"></i><span>Produk</span></a>
+        <a href="product.html"><i class="bi bi-heart"></i><span>Wishlist</span></a>
+        <a class="cart-link" href="product.html"><i class="bi bi-bag"></i><span>Keranjang</span><b id="cartCount">0</b></a>
+        <a class="profile" href="contact.html" aria-label="Kontak"><i class="bi bi-person-circle"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="categorybar" aria-label="Kategori">
+    <div class="container category-inner">
+      <a class="category-active" href="index.html"><i class="bi bi-list"></i> Semua kategori</a>
+      <a href="product.html">Promo Hari Ini</a>
+      <a href="product.html?brand=iPhone">iPhone</a>
+      <a href="product.html?brand=Samsung">Samsung</a>
+      <a href="product.html?brand=Huawei">Huawei</a>
+      <a href="product.html?brand=Oppo">Oppo</a>
+      <a href="product.html?brand=Vivo">Vivo</a>
+      <a href="about.html">Tentang Kami</a>
     </div>
   </nav>
-  <!-- Akhir Navbar -->
 
-  <!-- Carousel -->
-  <section class="container" style="padding: 40px 40px" data-aos="zoom-out-up" data-aos-duration="2000"
-    data-aos-delay="200">
-    <!-- [style="padding-bottom: 100px;] Untuk memberi jarak antara style atas dan bawah -->
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">KATALOG</span>
+        <h1>Semua Handphone</h1>
+        <p>Pilih berdasarkan merek. Setiap produk dilengkapi harga dan spesifikasi utama.</p>
       </div>
-      <div class="carousel-inner" style="border-radius: 30px 30px 30px 30px">
-        <div class="carousel-item active">
-          <img src="img/CarouselProduk/img1.jpg" class="d-block w-100" alt="..." />
+    </section>
+    <section class="catalog-section">
+      <div class="container">
+        <div class="chips" id="brandChips"><button class="chip active" data-filter="all">Semua</button><button class="chip" data-filter="iPhone">iPhone</button><button class="chip" data-filter="Samsung">Samsung</button><button class="chip" data-filter="Huawei">Huawei</button><button class="chip" data-filter="Oppo">Oppo</button><button class="chip" data-filter="Vivo">Vivo</button></div>
+        <div class="product-grid" id="productGrid">
+          <article class="product-card featured" data-brand="iPhone" data-name="iphone 17 pro max iphone apple">
+            <div class="product-media">
+              <span class="badge-best"><i class="bi bi-star-fill"></i> Pilihan Utama</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone iphone " role="img" aria-label="Ilustrasi iPhone 17 Pro Max"><span class="cam"></span><div class="screen">iPhone</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">APPLE</span><h3>iPhone 17 Pro Max</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Chip A19 Pro</li><li><i class="bi bi-phone"></i> Layar OLED 6,9&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera 48MP triple</li><li><i class="bi bi-memory"></i> Memori 256GB</li><li><i class="bi bi-battery-charging"></i> Baterai tahan seharian</li><li><i class="bi bi-apple"></i> iOS terbaru, garansi resmi</li></ul>
+              <div class="price"><strong>Rp25.999.000</strong><del>Rp27.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah ke Keranjang</button>
+              <a class="detail-link" href="productDetail.html#IPHONE17PM">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="iPhone" data-name="iphone 17 iphone apple">
+            <div class="product-media">
+              <span class="sale-label blue">Baru</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone iphone " role="img" aria-label="Ilustrasi iPhone 17"><span class="cam"></span><div class="screen">iPhone</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">APPLE</span><h3>iPhone 17</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Chip A19</li><li><i class="bi bi-phone"></i> Layar OLED 6,3&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera 48MP dual</li><li><i class="bi bi-memory"></i> Memori 256GB</li><li><i class="bi bi-apple"></i> iOS terbaru, garansi resmi</li></ul>
+              <div class="price"><strong>Rp15.999.000</strong><del>Rp16.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#IPHONE17">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Samsung" data-name="galaxy s25 ultra samsung samsung">
+            <div class="product-media">
+              <span class="sale-label ">-12%</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone samsung " role="img" aria-label="Ilustrasi Galaxy S25 Ultra"><span class="cam"></span><div class="screen">Galaxy</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">SAMSUNG</span><h3>Galaxy S25 Ultra</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Snapdragon 8 Elite</li><li><i class="bi bi-phone"></i> AMOLED 6,9&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 200MP</li><li><i class="bi bi-memory"></i> RAM 12GB / 256GB</li><li><i class="bi bi-battery-charging"></i> 5.000 mAh, 45W</li></ul>
+              <div class="price"><strong>Rp19.999.000</strong><del>Rp22.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#S25ULTRA">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Samsung" data-name="galaxy a56 5g samsung samsung">
+            <div class="product-media">
+              <span class="sale-label green">Favorit</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone samsung " role="img" aria-label="Ilustrasi Galaxy A56 5G"><span class="cam"></span><div class="screen">Galaxy</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">SAMSUNG</span><h3>Galaxy A56 5G</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Exynos 1580</li><li><i class="bi bi-phone"></i> AMOLED 6,7&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 50MP</li><li><i class="bi bi-memory"></i> RAM 8GB / 256GB</li><li><i class="bi bi-battery-charging"></i> 5.000 mAh, 45W</li></ul>
+              <div class="price"><strong>Rp6.999.000</strong><del>Rp7.499.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#A56">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Huawei" data-name="pura 70 pro huawei huawei">
+            <div class="product-media">
+              <span class="sale-label blue">Baru</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone huawei " role="img" aria-label="Ilustrasi Pura 70 Pro"><span class="cam"></span><div class="screen">HUAWEI</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">HUAWEI</span><h3>Pura 70 Pro</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Kirin 9010</li><li><i class="bi bi-phone"></i> LTPO OLED 6,8&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 50MP</li><li><i class="bi bi-memory"></i> RAM 12GB / 512GB</li><li><i class="bi bi-battery-charging"></i> 5.050 mAh, 100W</li></ul>
+              <div class="price"><strong>Rp16.999.000</strong><del>Rp18.499.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#PURA70PRO">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Huawei" data-name="mate 60 pro huawei huawei">
+            <div class="product-media">
+              <button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone huawei " role="img" aria-label="Ilustrasi Mate 60 Pro"><span class="cam"></span><div class="screen">HUAWEI</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">HUAWEI</span><h3>Mate 60 Pro</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Kirin 9000S</li><li><i class="bi bi-phone"></i> LTPO OLED 6,82&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 50MP</li><li><i class="bi bi-memory"></i> RAM 12GB / 512GB</li><li><i class="bi bi-battery-charging"></i> 5.000 mAh, 88W</li></ul>
+              <div class="price"><strong>Rp15.499.000</strong><del>Rp16.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#MATE60PRO">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Oppo" data-name="find x8 oppo oppo">
+            <div class="product-media">
+              <span class="sale-label green">Favorit</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone oppo " role="img" aria-label="Ilustrasi Find X8"><span class="cam"></span><div class="screen">OPPO</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">OPPO</span><h3>Find X8</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Dimensity 9400</li><li><i class="bi bi-phone"></i> AMOLED 6,59&quot; 120Hz</li><li><i class="bi bi-camera"></i> Hasselblad 50MP</li><li><i class="bi bi-memory"></i> RAM 16GB / 512GB</li><li><i class="bi bi-battery-charging"></i> 5.630 mAh, 80W</li></ul>
+              <div class="price"><strong>Rp14.999.000</strong><del>Rp16.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#FINDX8">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Oppo" data-name="reno13 5g oppo oppo">
+            <div class="product-media">
+              <span class="sale-label ">-9%</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone oppo " role="img" aria-label="Ilustrasi Reno13 5G"><span class="cam"></span><div class="screen">OPPO</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">OPPO</span><h3>Reno13 5G</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Dimensity 8350</li><li><i class="bi bi-phone"></i> AMOLED 6,59&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 50MP</li><li><i class="bi bi-memory"></i> RAM 12GB / 256GB</li><li><i class="bi bi-battery-charging"></i> 5.600 mAh, 80W</li></ul>
+              <div class="price"><strong>Rp6.999.000</strong><del>Rp7.699.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#RENO13">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Vivo" data-name="x200 vivo vivo">
+            <div class="product-media">
+              <span class="sale-label ">-10%</span><button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone vivo " role="img" aria-label="Ilustrasi X200"><span class="cam"></span><div class="screen">vivo</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">VIVO</span><h3>X200</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Dimensity 9400</li><li><i class="bi bi-phone"></i> AMOLED 6,67&quot; 120Hz</li><li><i class="bi bi-camera"></i> ZEISS 50MP triple</li><li><i class="bi bi-memory"></i> RAM 12GB / 256GB</li><li><i class="bi bi-battery-charging"></i> 5.800 mAh, 90W</li></ul>
+              <div class="price"><strong>Rp13.999.000</strong><del>Rp15.499.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#X200">Lihat detail spesifikasi</a>
+            </div>
+          </article>
+          <article class="product-card" data-brand="Vivo" data-name="v50 5g vivo vivo">
+            <div class="product-media">
+              <button class="wish" aria-label="Tambah ke wishlist"><i class="bi bi-heart"></i></button>
+              <div class="phone vivo " role="img" aria-label="Ilustrasi V50 5G"><span class="cam"></span><div class="screen">vivo</div></div>
+            </div>
+            <div class="product-info">
+              <span class="brand-label">VIVO</span><h3>V50 5G</h3>
+              <ul class="specs"><li><i class="bi bi-cpu"></i> Snapdragon 7 Gen 3</li><li><i class="bi bi-phone"></i> AMOLED 6,77&quot; 120Hz</li><li><i class="bi bi-camera"></i> Kamera utama 50MP</li><li><i class="bi bi-memory"></i> RAM 12GB / 256GB</li><li><i class="bi bi-battery-charging"></i> 6.000 mAh, 90W</li></ul>
+              <div class="price"><strong>Rp7.499.000</strong><del>Rp7.999.000</del></div>
+              <button class="add-cart"><i class="bi bi-bag-plus"></i> Tambah</button>
+              <a class="detail-link" href="productDetail.html#V50">Lihat detail spesifikasi</a>
+            </div>
+          </article>
         </div>
-        <div class="carousel-item">
-          <img src="img/CarouselProduk/img4.jpg" class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="img/CarouselProduk/img5.jpg" class="d-block w-100" alt="..." />
-        </div>
+        <p class="empty-note" id="emptyNote">Tidak ada produk yang cocok. Coba kata kunci atau merek lain.</p>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark"><i class="bi bi-shield-fill-check"></i></span><span>Blibli Store Ahmad Yani Serang</span></a>
+      <nav><a href="index.html">Beranda</a><a href="product.html">Produk</a><a href="about.html">Tentang</a><a href="contact.html">Kontak</a></nav>
+      <p>© 2026 Blibli Store Ahmad Yani Serang</p>
     </div>
-  </section>
-  <!-- Akhir Carousel -->
+  </footer>
 
-  <!-- New Product -->
-  <!-- partial:index.partial.html -->
-  <section class="section-products" id="section-products">
-    <div class="container" data-aos="fade-up" data-aos-duration="2000">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-8 col-lg-6">
-          <div class="header">
-            <h3>Featured Product</h3>
-            <h1>New Product</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-1" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">INK</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#INKTHUNDER"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#INKTHUNDER">
-                <h3 class="product-title">INK Trooper Thunder</h3>
-              </a>
-              <h4 class="product-old-price">Rp 700.000</h4>
-              <h4 class="product-price">Rp 695.000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-6" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">KYT</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#KYTNZ"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#KYTNZ">
-                <h3 class="product-title">KYT HELM NZ RACE BASTIANINI REPLIKA 2022</h3>
-              </a>
-              <h4 class="product-old-price">Rp4.200.000</h4>
-              <h4 class="product-price">Rp4.032.000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-2" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">INK</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#INKSOLID"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#INKSOLID">
-                <h3 class="product-title">INK Adventure solid black</h3>
-              </a>
-              <h4 class="product-old-price">Rp 1.130.000</h4>
-              <h4 class="product-price">Rp 900.000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-7" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">Airoh</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#AIROH"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#AIROH">
-                <h3 class="product-title">Airoh ST701 Way Yellow Gloss</h3>
-              </a>
-              <h4 class="product-old-price">Rp 5.500.000</h4>
-              <h4 class="product-price">Rp 4.950.000</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ul class="pagination">
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="New product2.html">2</a></li>
-    </ul>
-  </section>
-  <!-- partial -->
-  <!-- Akhir New Product -->
-
-  <!-- =============================================================================================================================== -->
-
-  <!-- partial:index.partial.html -->
-  <section class="section-products" id="section-products1">
-    <div class="container" data-aos="fade-up" data-aos-duration="2000">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-8 col-lg-6">
-          <div class="header">
-            <h1>Product</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-3" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">JPX</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#JPXMX"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#JPXMX">
-                <h3 class="product-title">JPX MX-726R Rans</h3>
-              </a>
-              <h4 class="product-old-price">Rp 550.000</h4>
-              <h4 class="product-price">Rp 540.000</h4>
-            </div>
-          </div>
-        </div>
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-4" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">ZEUS</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#ZEUS"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#ZEUS">
-                <h3 class="product-title">Zeus ZS813 White Fullface Double Visor</h3>
-              </a>
-              <h4 class="product-price">Rp 760.000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-5" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">JPX</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#JPXWHT"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#JPXWHT">
-                <h3 class="product-title">JPX MX-726R TRITONE WHITE</h3>
-              </a>
-              <h4 class="product-old-price">Rp540.000</h4>
-              <h4 class="product-price">Rp530.000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-8" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">JPN</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#JPN"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#JPN">
-                <h3 class="product-title">Helm JPN ARC Yellow</h3>
-              </a>
-              <h4 class="product-price">Rp145,000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-13" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">HBC</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#CAKILGREEN"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#CAKILGREEN">
-                <h3 class="product-title">Cakil Modular Army Doff</h3>
-              </a>
-              <h4 class="product-price">Rp 179.000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-14" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">KYT</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#HONDAKYT"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#HONDAKYT">
-                <h3 class="product-title">Honda Racing HRR KYT L</h3>
-              </a>
-              <h4 class="product-price">583.000</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-15" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">HBC</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#CAKILRUST"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#CAKILRUST">
-                <h3 class="product-title">Cakil HBC RUST</h3>
-              </a>
-              <h4 class="product-price">Rp 359.900</h4>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Product -->
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div id="product-16" class="single-product">
-            <div class="part-1" style="border-radius: 10px 10px 10px 10px">
-              <span class="new">NJS</span>
-              <ul>
-                <li>
-                  <a href="productDetail.html#NJSBLACK"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fas fa-heart"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="part-2">
-              <a href="productDetail.html#NJSBLACK">
-                <h3 class="product-title">NJS NX2 Solid Black Doff</h3>
-              </a>
-              <h4 class="product-price">Rp 295.000</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ul class="pagination">
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="New product3.html">2</a></li>
-    </ul>
-  </section>
-  <!-- partial -->
-
-  <!-- Footer -->
-  <section>
-    <div class="footer-basic">
-      <footer>
-        <div class="social">
-          <a href="https://www.instagram.com/alvin_grosir_helm/?hl=id" target="_blank"><i
-              class="bi bi-instagram"></i></a>
-          <a href="http://wa.me/6281232246565"><i class="bi bi-whatsapp" target="_blank"></i></a>
-          <a href="https://www.facebook.com/ALVIN.GROSIR.HELM/" target="_blank"><i class="bi bi-facebook"></i></a>
-        </div>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="index.html">Home</a></li>
-          <li class="list-inline-item"><a href="about.html">About</a></li>
-          <li class="list-inline-item"><a href="product.html">Produk</a></li>
-          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-        </ul>
-        <p class="copyright">Blibli Store Ahmad Yani Serang © 2023</p>
-      </footer>
-    </div>
-  </section>
-
-  <!-- Akhir Footer -->
-
-  <!-- Scroll to Top -->
-  <button onclick="topFunction()" class="btn btn-floating mb-1" id="myBtn" title="Go to top"><i
-      class="bi bi-arrow-up-circle-fill"></i></button>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <!-- EFEK SCROLL -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <!-- JAVA SCRIPT -->
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
   <script src="script.js"></script>
-
-  <!-- Scroll to Top -->
-  <button onclick="topFunction()" class="btn btn-floating mb-1" id="myBtn" title="Go to top"><i
-      class="bi bi-arrow-up-circle-fill"></i></button>
 </body>
-
 </html>

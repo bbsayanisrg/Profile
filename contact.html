@@ -1,187 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-  <title>Blibli Store Ahmad Yani Serang</title>
-
-  <!-- Shortcut Icon -->
-  <link href="img/faticon/output-onlinepngtools.png" rel="shortcut icon">
-
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="relasi.css">
-
-  <!-- Box Icons -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-  <!-- Font Awesome CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
-  <!-- Typed.js -->
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-  <!-- Font Awesome 5 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Kontak — Blibli Store Ahmad Yani Serang</title>
+  <meta name="description" content="Hubungi Blibli Store Ahmad Yani Serang">
+  <link rel="icon" type="image/svg+xml" href="img/faticon/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-lg fixed-top" style="background-color: #101820;">
-    <div class="container">
-      <a class="navbar-brand" href="#">Blibli Store Ahmad Yani Serang</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Blibli Store Ahmad Yani Serang beranda">
+        <span class="brand-mark"><i class="bi bi-shield-fill-check"></i></span>
+        <span>Blibli Store Ahmad Yani Serang</span>
+      </a>
+      <form class="search" role="search" onsubmit="return false">
+        <i class="bi bi-search"></i>
+        <input id="searchInput" type="search" placeholder="Cari iPhone, Samsung, Oppo, atau tipe..." autocomplete="off">
+      </form>
+      <nav class="header-actions" aria-label="Navigasi utama">
+        <a href="product.html"><i class="bi bi-grid"></i><span>Produk</span></a>
+        <a href="product.html"><i class="bi bi-heart"></i><span>Wishlist</span></a>
+        <a class="cart-link" href="product.html"><i class="bi bi-bag"></i><span>Keranjang</span><b id="cartCount">0</b></a>
+        <a class="profile" href="contact.html" aria-label="Kontak"><i class="bi bi-person-circle"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="categorybar" aria-label="Kategori">
+    <div class="container category-inner">
+      <a class="category-active" href="index.html"><i class="bi bi-list"></i> Semua kategori</a>
+      <a href="product.html">Promo Hari Ini</a>
+      <a href="product.html?brand=iPhone">iPhone</a>
+      <a href="product.html?brand=Samsung">Samsung</a>
+      <a href="product.html?brand=Huawei">Huawei</a>
+      <a href="product.html?brand=Oppo">Oppo</a>
+      <a href="product.html?brand=Vivo">Vivo</a>
+      <a href="about.html">Tentang Kami</a>
     </div>
   </nav>
-  <!-- navbar end -->
 
-  <!--jumbotron  -->
-  <div class="jumbotron jumbotron-fluid" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="200">
-    <div class="container">
-      <div class="row text-center mt-5 mb-3"></div>
-      <h1 class="display-4" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="200">
-        <span class="font-weight-bold text-white" style="font-family: 'Outfit', sans-serif">CONTACT</span>
-        >
-      </h1>
-      <p class="lead text-white" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="200">
-        <a href="index.html">Home</a> / Contact.
-      </p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">KONTAK</span>
+        <h1>Hubungi Kami</h1>
+        <p>Tanyakan stok, harga, atau cicilan. Pesan Anda akan dibuka di WhatsApp.</p>
+      </div>
+    </section>
 
-    </div>
-  </div>
-  <!--jumbotron end  -->
-
-  <!-- form -->
-  <section data-aos="zoom-in-up" data-aos-delay="200">
-    <div class="contact-container mt-5">
-      <div class="form-container">
-        <h2 style="color: white;" style="font-family: 'Outfit', sans-serif">HUBUNGI KAMI</h2>
-        <form action="mailto:Alvinhelm00@gmail.com" method="post" enctype="text/plain" class="contact-form">
-          <div class="mb-3">
-            <label for="namaLengkap" class="form-label">Nama Lengkap</label>
-            <input type="text" name="Nama Lengkap" class="form-control" id="namaLengkap" placeholder="Nama Lengkap"
-              required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" name="Email" class="form-control" id="email" placeholder="Masukkan Email Anda..."
-              required>
-          </div>
-          <div class="mb-3">
-            <label for="pesan" class="form-label">Pesan</label>
-            <textarea name="Pesan" class="form-control" id="pesan" rows="5" placeholder="Pesan" required></textarea>
-          </div>
-          <input type="submit" value="Kirim" class="btn btn-primary" style="background-color: #1A9425;">
-
+    <section class="container contact-grid">
+      <div>
+        <h2>Informasi Toko</h2>
+        <ul class="contact-list">
+          <li><i class="bi bi-geo-alt-fill"></i>Blibli Store Ahmad Yani Serang, Jl. Ahmad Yani, Serang, Banten</li>
+          <li><i class="bi bi-whatsapp"></i>WhatsApp: <a href="#" data-wa="Halo Blibli Store Ahmad Yani Serang, saya ingin bertanya.">chat sekarang</a></li>
+        </ul>
+        <iframe class="map-frame" title="Lokasi Blibli Store Ahmad Yani Serang" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Blibli+Store+Ahmad+Yani+Serang&output=embed"></iframe>
+      </div>
+      <div>
+        <h2>Kirim Pesan</h2>
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="cName" placeholder="Nama" required>
+          <input type="text" id="cSubject" placeholder="Produk yang diminati (contoh: iPhone 17 Pro Max)">
+          <textarea id="cMessage" rows="5" placeholder="Pesan" required></textarea>
+          <button type="submit"><i class="bi bi-whatsapp"></i> Kirim via WhatsApp</button>
         </form>
       </div>
+    </section>
+  </main>
 
-      <!-- map -->
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8103.922810501254!2d113.71327982549714!3d-8.16969490851169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd69433aed31959%3A0xed625c7b9c89bcc!2sAlvin%20Helm%20Grosir%20Dan%20Eceran!5e0!3m2!1sid!2sid!4v1685713459828!5m2!1sid!2sid"
-          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark"><i class="bi bi-shield-fill-check"></i></span><span>Blibli Store Ahmad Yani Serang</span></a>
+      <nav><a href="index.html">Beranda</a><a href="product.html">Produk</a><a href="about.html">Tentang</a><a href="contact.html">Kontak</a></nav>
+      <p>© 2026 Blibli Store Ahmad Yani Serang</p>
     </div>
-  </section>
+  </footer>
 
-
-  <!-- form end end -->
-
-  <!-- maps -->
-  <section id="icon" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="200">
-    <div class="container">
-      <div class="row text-center mt-5 mb-3">
-        <div class="col">
-          <h2 style="color: white;">HUBUNGI KAMI</h2>
-        </div>
-      </div>
-      <div class="row fs-5 text-center">
-        <div class="col">
-          <div class="wrapper">
-            <div class="icon facebook">
-              <div class="tooltip">Facebook</div>
-              <a href="https://www.facebook.com/ALVIN.GROSIR.HELM/" target="_blank">
-                <span><i class="fab fa-facebook-f"></i></span>
-              </a>
-            </div>
-            <div class="icon whatsapp">
-              <div class="tooltip">Whatsapp</div>
-              <a href="http://wa.me/6281232246565" target="_blank">
-                <span><i class="fab fa-whatsapp"></i></span>
-              </a>
-            </div>
-            <div class="icon instagram">
-              <div class="tooltip">Instagram</div>
-              <a href="https://www.instagram.com/alvin_grosir_helm/?hl=id" target="_blank">
-                <span><i class="fab fa-instagram"></i></span>
-              </a>
-            </div>
-          </div>
-
-  </section>
-  <!-- maps end -->
-
-
-
-  <!-- contact  -->
-  <section id="contact">
-    <div class="container">
-      <div class="row text-center mt-5 mb-3">
-        <div class="col">
-        </div>
-      </div>
-      <div class="row justify-content-center ">
-      </div class="col-md-6">
-    </div>
-  </section>
-  <!-- contact end  -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <!-- Scroll to Top -->
-  <button onclick="topFunction()" class="btn btn-floating mb-1" id="myBtn" title="Go to top"><i
-      class="bi bi-arrow-up-circle-fill"></i></button>
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
   <script src="script.js"></script>
 </body>
-
 </html>

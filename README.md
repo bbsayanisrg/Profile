@@ -1,33 +1,17 @@
-# Company Profile Helmet Store
+# Blibli Store Ahmad Yani Serang
 
-## Description
+Website profil dan katalog toko handphone (iPhone, Samsung, Huawei, Oppo, Vivo) berbasis HTML, CSS, dan JavaScript.
 
-This is a company profile website for a helmet store built using Bootstrap.
+## Halaman
+- `index.html` — beranda dan produk terlaris
+- `product.html` — semua produk, filter merek, pencarian
+- `productDetail.html` — spesifikasi lengkap tiap produk
+- `about.html` — tentang toko
+- `contact.html` — kontak dan formulir WhatsApp
 
-Link Company Profile Helmet Store : [Company Profile (click)](https://bbsayanisrg.github.io/Profile/)
+## Yang perlu diatur
+- Nomor WhatsApp toko: ubah `STORE_WA` di bagian atas `script.js`.
+- Harga dan spesifikasi: ubah data di tiap kartu produk (`index.html`, `product.html`, `productDetail.html`).
 
-## Technology Used
-
-- **JavaScript:** Application logic and DOM manipulation.
-- **HTML5:** Web page structure.
-- **CSS3:** Responsive user interface and layout design.
-- **Bootstrap:** To make it easier to create responsive and consistent interfaces
-
-## Installation
-
-1. Clone this repository to your local server.
-    ```
-    git clone [https://github.com/rizalfahlevi8/company-profile.git](https://bbsayanisrg.github.io/Profile.git
-    ```
-2. Open the project directory.
-    ```
-    cd profile
-    ```
-3. Open the **index.html** file in your web browser.
-
-## Contribution
-
-We welcome contributions from anyone who wants to participate in the development of the "Company Profile Helmet Store" application. If you would like to contribute, please create a pull request and we will review your contribution.
-
-## Contact
-If you have questions or problems, don't hesitate to contact us via the social media listed on [our profile page.](https://github.com/bbsayanisrg)
+## Menjalankan
+Buka `index.html` di browser.
