@@ -1,4 +1,4 @@
-// Scroll and UI interactions for Alvin Helm
+// Scroll and UI interactions for Blibli Store Ahmad Yani Serang
 const toTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
   if (toTop) toTop.classList.toggle('visible', window.scrollY > 300);
